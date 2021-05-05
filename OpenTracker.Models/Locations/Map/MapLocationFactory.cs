@@ -53,7 +53,7 @@ namespace OpenTracker.Models.Locations.Map
         }
 
         /// <summary>
-        ///     Returns the list of map locations for the specified location.
+        /// Returns the list of map locations for the specified location.
         /// </summary>
         /// <param name="location">
         ///     The location data.
@@ -1182,7 +1182,7 @@ namespace OpenTracker.Models.Locations.Map
                 },
                 LocationID.DarkLakeHyliaShop => new List<IMapLocation>
                 {
-                    _factory(MapID.DarkWorld, 1460, 1540, location)
+                    _factory(MapID.DarkWorld, 1300, 1618, location)
                 },
                 LocationID.DarkPotionShop => new List<IMapLocation>
                 {
