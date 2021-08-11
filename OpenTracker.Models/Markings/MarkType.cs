@@ -91,6 +91,19 @@
         HalfMagic,
         BigKey,
         SuperBunnyCaveBottom,
-        SuperBunnyCaveTop
+        SuperBunnyCaveTop,
+        RupeeGreen,
+        RupeeBlue,
+        RupeeRed,
+        Rupee50,
+        Rupee100,
+        Rupee300,
+        HeartPiece,
+        HeartContainer,
+        Arrow10,
+        Bomb3,
+        Bomb10,
+        Map,
+        Compass,
     }
 }

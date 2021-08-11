@@ -78,6 +78,19 @@ namespace OpenTracker.ViewModels.Markings
                     case MarkType.Mirror:
                     case MarkType.HalfMagic:
                     case MarkType.BigKey:
+                    case MarkType.RupeeGreen:
+                    case MarkType.RupeeBlue:
+                    case MarkType.RupeeRed:
+                    case MarkType.Rupee50:
+                    case MarkType.Rupee100:
+                    case MarkType.Rupee300:
+                    case MarkType.HeartPiece:
+                    case MarkType.HeartContainer:
+                    case MarkType.Arrow10:
+                    case MarkType.Bomb3:
+                    case MarkType.Bomb10:
+                    case MarkType.Map:
+                    case MarkType.Compass:
                         {
                             NonEntranceMarkingSelect.Add(_buttonFactory((MarkType)i));
                         }
