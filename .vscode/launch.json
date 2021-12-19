@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/OpenTracker/bin/Debug/netcoreapp3.1/OpenTracker.dll",
+            "program": "${workspaceFolder}/OpenTracker/bin/Debug/net5.0/OpenTracker.dll",
             "args": [],
             "cwd": "${workspaceFolder}/OpenTracker",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
