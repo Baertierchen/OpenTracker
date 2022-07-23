@@ -227,7 +227,7 @@ namespace OpenTracker.ViewModels.Dungeons
                 _aggregateRequirements[new HashSet<IRequirement>
                 {
                     _itemsPanelOrientationRequirements[Orientation.Vertical],
-                    _aggregateRequirements[new HashSet<IRequirement>
+                    _alternativeRequirements[new HashSet<IRequirement>
                     {
                         _alwaysDisplayDungeonItemsRequirements[true],
                         _bigKeyShuffleRequirements[true]
@@ -291,6 +291,9 @@ namespace OpenTracker.ViewModels.Dungeons
                         break;
                     case IPrizeSection prizeSection when id != LocationID.AgahnimTower && id != LocationID.GanonsTower:
                         dungeonItems.Add(_factory(null, _itemFactory(_prizeFactory(prizeSection))));
+                        dungeonItems.Add(_factory(
+                            _bossShuffleRequirements[true],
+                            _itemFactory(_bossFactory(prizeSection.BossPlacement))));
                         break;
                     case IBossSection bossSection when bossSection.BossPlacement.Boss != BossType.Aga:
                         dungeonItems.Add(_factory(

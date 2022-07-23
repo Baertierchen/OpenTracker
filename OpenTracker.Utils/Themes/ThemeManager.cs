@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reactive.Linq;
 using Avalonia.Markup.Xaml;
 using Avalonia.Markup.Xaml.Styling;
 using Avalonia.Styling;
@@ -37,13 +36,7 @@ namespace OpenTracker.Utils.Themes
             app.Styles.Insert(0, SelectedTheme.Style);
 
             var _ = this.WhenAnyValue(x => x.SelectedTheme)
-                .Where(x => x != null).Subscribe(x =>
-                {
-                    if (x?.Style != null)
-                    {
-                        app.Styles[0] = x.Style;
-                    }
-                });
+                .Subscribe(x => { app.Styles[0] = x.Style; });
         }
 
         private List<ITheme> GetDefaultThemes()
@@ -102,7 +95,7 @@ namespace OpenTracker.Utils.Themes
             {
                 Debug.Write(e.ToString());
             }
-
+            
             return themes.Count == 0 ? GetDefaultThemes() : themes;
         }
         

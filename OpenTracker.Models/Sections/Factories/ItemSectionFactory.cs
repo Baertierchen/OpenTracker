@@ -380,6 +380,8 @@ namespace OpenTracker.Models.Sections.Factories
         {
             switch (id)
             {
+                case LocationID.Pedestal:
+                    return _overworldNodes[OverworldNodeID.LightWorldBook];
                 case LocationID.LumberjackCave:
                 case LocationID.RaceGame:
                 case LocationID.Library:
@@ -394,12 +396,16 @@ namespace OpenTracker.Models.Sections.Factories
                 case LocationID.HoulihanHole:
                 case LocationID.SanctuaryGrave: 
                     return _overworldNodes[OverworldNodeID.LightWorld];
+                case LocationID.BombosTablet:
+                    return _overworldNodes[OverworldNodeID.BombosTabletLedgeBook];
                 case LocationID.ZoraArea when index == 0: 
                     return _overworldNodes[OverworldNodeID.ZoraArea];
                 case LocationID.BumperCave: 
                     return _overworldNodes[OverworldNodeID.DarkWorldWest];
                 case LocationID.SpectacleRock when index == 0:
                     return _overworldNodes[OverworldNodeID.DeathMountainWestBottom];
+                case LocationID.EtherTablet:
+                    return _overworldNodes[OverworldNodeID.DeathMountainWestTopBook];
                 case LocationID.FloatingIsland:
                     return _overworldNodes[OverworldNodeID.DeathMountainEastTop];
                 case LocationID.CastleSecretEntrance:
@@ -439,6 +445,7 @@ namespace OpenTracker.Models.Sections.Factories
                     }];
                 case LocationID.Pedestal:
                 case LocationID.BottleVendor:
+                case LocationID.Tavern:
                 case LocationID.RaceGame:
                 case LocationID.MushroomSpot:
                 case LocationID.Dam when index == 1:
@@ -462,7 +469,6 @@ namespace OpenTracker.Models.Sections.Factories
                 case LocationID.BlindsHouse:
                 case LocationID.TheWell:
                 case LocationID.ChickenHouse:
-                case LocationID.Tavern:
                 case LocationID.SickKid:
                 case LocationID.MagicBat:
                 case LocationID.Library:
